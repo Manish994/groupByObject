@@ -72,10 +72,18 @@ const AdvancedGroup = () => {
   //********************************************************************
   //CALCULATION TOTAL FROM SUB_TOTAL
   //*********************************************************************/
-  let calc_total = Object.entries(grouped.getPremiumSubtoal);
-  calc_total.forEach(function (item) {
-    debugger;
-    console.log(item[1]);
+  getPremiumSubtoal.forEach(function (item) {
+    let convertToArray = Object.values(item);
+    return convertToArray.forEach(function (item) {
+      debugger;
+      console.log(item);
+      console.log(item);
+      let abc = item.reduce(function (o, g, i) {
+        debugger;
+        return o + Math.round(g);
+      }, 0);
+      return abc;
+    });
   });
 
   return <div>Manish</div>;
